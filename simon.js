@@ -87,14 +87,14 @@ function buttonPressed(){
 
 let allBtns = document.querySelectorAll(".btn");
 for (let btn of allBtns) {
-    btn.addEventListener("click", buttonPressed);
+    btn.addEventListener("click" || "touchstart", buttonPressed);
 
     // Touch event for touchscreens (like phones/tablets)
-    btn.addEventListener("touchstart", function(e) {
-        e.preventDefault();  // Prevents default touch behavior like scrolling
-        buttonPressed.call(this);  // Call the same function as for click
-    });
-}
+//     btn.addEventListener("touchstart", function(e) {
+//         e.preventDefault();  // Prevents default touch behavior like scrolling
+//         buttonPressed.call(this);  // Call the same function as for click
+//     });
+// }
 
 function reset(){
     gameSeq = [];
