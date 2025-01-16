@@ -15,7 +15,7 @@ let h2 = document.querySelector("h2");
 
 let btns = ["pink","blue","green","yellow"];
 
-document.addEventListener("keypress" || "touchstart", function(){
+document.addEventListener("keypress || touchstart", function(){
     if (started == false){
         console.log("game is started");
         started = true;
@@ -90,11 +90,11 @@ for (let btn of allBtns) {
     btn.addEventListener("click" || "touchstart", buttonPressed);
 
     // Touch event for touchscreens (like phones/tablets)
-//     btn.addEventListener("touchstart", function(e) {
-//         e.preventDefault();  // Prevents default touch behavior like scrolling
-//         buttonPressed.call(this);  // Call the same function as for click
-//     });
-// }
+    btn.addEventListener("touchstart", function(e) {
+        e.preventDefault();  // Prevents default touch behavior like scrolling
+        buttonPressed.call(this);  // Call the same function as for click
+    });
+}
 
 function reset(){
     gameSeq = [];
