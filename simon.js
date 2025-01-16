@@ -72,7 +72,7 @@ function checkAns(idx){
             setTimeout(levelUp, 1000);
         }
     } else{
-        h2.innerHTML=`Game Over!<br>Your score was <b>${level}</b> <br> click anywhere to start.`;
+        h2.innerHTML=`Game Over!<br>Your score was <b>${level}</b> <br> press anywhere to start.`;
         document.querySelector("body").style.backgroundColor = "black";
         document.querySelector(".heading").style.backgroundColor = "red";
         soundGameOver.play();
