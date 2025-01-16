@@ -87,7 +87,7 @@ function buttonPressed(){
 
 let allBtns = document.querySelectorAll(".btn");
 for (let btn of allBtns) {
-    btn.addEventListener("click" || "touchstart", buttonPressed);
+    btn.addEventListener("click", buttonPressed);
 
     // Touch event for touchscreens (like phones/tablets)
     btn.addEventListener("touchstart", function(e) {
