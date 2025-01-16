@@ -49,31 +49,28 @@ body{
 }
 
 .flash{
-    background-color: white;
+    background-color: white; 
 }
 
 .userflash{
-    background-color: black;
+    background-color: black; 
 }
 
 
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
-    .h1, .heading {
+    .title, .heading {
         width: 90%; /* Increased width for small screens */
         max-width: none;
     }
     
     .btn {
-        height: 7rem; /* Further reducing button size for smaller screens */
-        width: 7rem;
+        height: 6rem; /* Reduced button size for smaller screens */
+        width: 6rem;
+        margin: 0.8rem; /* Reduced margin between buttons */
     }
     
     .btn-container {
         justify-content: space-evenly; /* Space out buttons more */
     }
-
 }
-
-
-
