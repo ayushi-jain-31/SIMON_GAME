@@ -7,9 +7,9 @@ let level = 0;
 let highestScore = 0;
 let highestScoreDisplay = document.querySelector("#highest-score");
 
-let soundFlash = new Audio("soundFlash.mp3");
+let soundFlash = new Audio("soundflash.mp3");
 let soundButtonPress = new Audio("soundButtonPress.mp3");
-let soundGameOver = new Audio("GameOver.mp3");
+let soundGameOver = new Audio("gameover.mp3");
 
 let h2 = document.querySelector("h2");
 
@@ -26,7 +26,7 @@ document.addEventListener("keypress", function(){
 
 function gameFlash(btn){
     btn.classList.add("flash");
-    soundFlash.play();
+    soundflash.play();
     setTimeout(function(){
         btn.classList.remove("flash");
     } , 200);
@@ -67,7 +67,7 @@ function checkAns(idx){
         h2.innerHTML=`Game Over!<br>Your score was <b>${level}</b> <br> Press any key to start.`;
         document.querySelector("body").style.backgroundColor = "black";
         document.querySelector(".heading").style.backgroundColor = "red";
-        soundGameOver.play();
+        gameover.play();
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor ="rgb(240,193,225)";
             document.querySelector(".heading").style.backgroundColor ="rgb(222, 191, 214)";
