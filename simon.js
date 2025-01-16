@@ -15,15 +15,7 @@ let h2 = document.querySelector("h2");
 
 let btns = ["pink","blue","green","yellow"];
 
-document.addEventListener("keypress", function(){
-    if (started == false){
-        console.log("game is started");
-        started = true;
-    }
-
-    levelUp();
-});
-document.addEventListener("touchstart", function(){
+document.addEventListener("keypress" || "touchstart", function(){
     if (started == false){
         console.log("game is started");
         started = true;
