@@ -1,0 +1,79 @@
+body{
+    text-align:center;
+    background-color: #F0C1E1;
+}
+.h1{
+    margin:0 auto;
+    width:80%;
+    max-width:25rem;
+    color:white;
+    border-radius:10px;
+    background-color: #803169;
+    box-shadow: 2px 2px 20px #140911;
+    padding:1rem;
+}
+.heading{
+    background-color: #debfd6f5;
+    width:80%;
+    max-width:20rem;
+    margin:1rem auto;
+    border-radius:20px;
+    box-shadow: 2px 2px 10px #140911;
+    padding:1rem;
+}
+.btn{
+    height:8rem;
+    width:8rem;
+    border-radius:20%;
+    border:0.4rem solid black;
+    box-shadow: 2px 2px 15px #000000;
+    margin:1rem;
+    transition: background-color 0.3s ease;
+}
+.btn-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.pink{
+    background-color:#d95980;
+}
+.blue{
+    background-color:#62b9d3;
+}
+.yellow{
+    background-color:#f99b45;
+}
+.green{
+    background-color:#50cd6d;
+}
+
+.flash{
+    background-color: white;
+}
+
+.userflash{
+    background-color: black;
+}
+
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .h1, .heading {
+        width: 90%; /* Increased width for small screens */
+        max-width: none;
+    }
+    
+    .btn {
+        height: 7rem; /* Further reducing button size for smaller screens */
+        width: 7rem;
+    }
+    
+    .btn-container {
+        justify-content: space-evenly; /* Space out buttons more */
+    }
+
+}
+
+
+
