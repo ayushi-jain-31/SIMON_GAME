@@ -26,7 +26,7 @@ document.addEventListener("keypress", function(){
 
 function gameFlash(btn){
     btn.classList.add("flash");
-    soundflash.play();
+    soundFlash.play();
     setTimeout(function(){
         btn.classList.remove("flash");
     } , 200);
@@ -67,7 +67,7 @@ function checkAns(idx){
         h2.innerHTML=`Game Over!<br>Your score was <b>${level}</b> <br> Press any key to start.`;
         document.querySelector("body").style.backgroundColor = "black";
         document.querySelector(".heading").style.backgroundColor = "red";
-        gameover.play();
+        soundGameOver.play();
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor ="rgb(240,193,225)";
             document.querySelector(".heading").style.backgroundColor ="rgb(222, 191, 214)";
