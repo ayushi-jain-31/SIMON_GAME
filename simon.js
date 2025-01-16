@@ -30,19 +30,18 @@ function gameFlash(btn){
     setTimeout(function(){
         btn.classList.remove("flash");
     } , 200);
-
 }
+
 function userFlash(btn){
     btn.classList.add("userflash");
     soundButtonPress.play();
     setTimeout(function(){
         btn.classList.remove("userflash");
     } , 200);
-
 }
 
 function levelUp(){
-    userSeq=[];
+    userSeq = [];
     level++;
     h2.innerText = (`level ${level}`);
 
@@ -62,7 +61,7 @@ function levelUp(){
 function checkAns(idx){
     if(userSeq[idx] === gameSeq[idx]){
         if(userSeq.length == gameSeq.length){
-            setTimeout(levelUp,1000);
+            setTimeout(levelUp, 1000);
         }
     } else{
         h2.innerHTML=`Game Over!<br>Your score was <b>${level}</b> <br> Press any key to start.`;
@@ -72,22 +71,23 @@ function checkAns(idx){
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor ="rgb(240,193,225)";
             document.querySelector(".heading").style.backgroundColor ="rgb(222, 191, 214)";
-        } , 1000);
+        }, 1000);
         reset();
     }
 }
+
 function buttonPressed(){
     let btn = this;
     userFlash(btn);
 
-    usercolor = btn.getAttribute("id");
+    let usercolor = btn.getAttribute("id");
     userSeq.push(usercolor);
-    checkAns(userSeq.length-1);
+    checkAns(userSeq.length - 1);
 }
 
 let allBtns = document.querySelectorAll(".btn");
-for(btn of allBtns){
-    btn.addEventListener("click",buttonPressed);
+for (let btn of allBtns) {
+    btn.addEventListener("click", buttonPressed);
 
     // Touch event for touchscreens (like phones/tablets)
     btn.addEventListener("touchstart", function(e) {
